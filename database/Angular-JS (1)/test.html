@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="listctroller">
+    <table>
+        <tr>
+            <th>s.no</th>
+            <th>name</th>
+            <th>mobile</th>
+            <th>addr</th>
+        </tr>
+
+        <tr ng-repeat="x  in list">
+            <td>{{x.sno}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.mobile}}</td>
+            <td>{{x.addr}}</td>
+        </tr>
+    </table>
+
+
+</body>
+
+<script>
+
+    let app = angular.module("myapp", []);
+		app.controller('listctroller', function($scope){
+		$scope.list= [
+        {
+            'sno': 1,
+            'name': "A",
+            'mobile': 388324823,
+            'addr': "road17",
+        },
+        {
+            'sno': 2,
+            'name': "B",
+            'mobile': 2387753454534475,
+            'addr': "KONDHAWE",
+        }]
+});
+
+
+</script>
+</htm>
